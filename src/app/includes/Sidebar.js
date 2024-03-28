@@ -1,5 +1,6 @@
 /** @format */
-
+"use client";
+import { useContext } from "react";
 import {
   AiOutlineDashboard,
   AiOutlineBarChart,
@@ -7,12 +8,17 @@ import {
   AiFillEdit,
   AiFillBackward,
 } from "react-icons/ai";
+import { SidebarContext } from "../context/SidebarContext";
 
 export default function Sidebar() {
+  const { sidebar, setSidebar } = useContext(SidebarContext);
+
   return (
     <nav
       aria-label="Sidebar"
-      className="w-64 lg:block lg:flex-shrink-0 lg:bg-white shadow-lg lg:overflow-y-auto p-4 lg:p-8"
+      className={` w-64 lg:block lg:flex-shrink-0 lg:bg-white shadow-lg lg:overflow-y-auto p-4 lg:p-8 ${
+        sidebar ? "active" : "deactive"
+      }`}
     >
       {/* Sidebar brand */}
       <p className="font-bold text-zinc-950 tracking-widest text-xl">
