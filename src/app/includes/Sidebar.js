@@ -9,6 +9,7 @@ import {
   AiFillBackward,
 } from "react-icons/ai";
 import { SidebarContext } from "../context/SidebarContext";
+import Link from "next/link";
 
 export default function Sidebar() {
   const { sidebar, setSidebar } = useContext(SidebarContext);
@@ -26,40 +27,40 @@ export default function Sidebar() {
       </p>
       {/* Sidebar content */}
       <div className="py-8">
-        <a
-          href=""
+        <Link
+          href="/"
           className="flex items-center text-slate-900 mb-6 text-sm hover:bg-cyan-100 rounded-md p-3"
         >
           <AiOutlineDashboard className="inline me-3" /> Dashboard
-        </a>
+        </Link>
         {/* section */}
         <p className="mb-6 text-slate-400 uppercase text-xs">Trading Journal</p>
-        <a
-          href=""
+        <Link
+          href="/my-strategy"
           className="flex items-center text-slate-900 mb-6 text-sm hover:bg-cyan-100 rounded-md p-3"
         >
           <AiFillExperiment className="inline me-3" /> My Strategy
-        </a>
-        <a
-          href=""
+        </Link>
+        <Link
+          href="/mynote"
           className="flex items-center text-slate-900 mb-6 text-sm hover:bg-cyan-100 rounded-md p-3"
         >
           <AiFillEdit className="inline me-3" /> My Note
-        </a>
-        <a
-          href=""
+        </Link>
+        <Link
+          href="/my-journal"
           className="flex items-center text-slate-900 mb-6 text-sm hover:bg-cyan-100 rounded-md p-3"
         >
           <AiOutlineBarChart className="inline me-3" /> My Journal
-        </a>
+        </Link>
         {/* section */}
         <p className="mb-6 text-slate-400 uppercase text-xs">Testing</p>
-        <a
-          href=""
+        <Link
+          href="/backtest"
           className="flex items-center text-slate-900 mb-6 text-sm hover:bg-cyan-100 rounded-md p-3"
         >
           <AiFillBackward className="inline me-3" /> Backtest
-        </a>
+        </Link>
       </div>
     </nav>
   );
