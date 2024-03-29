@@ -42,7 +42,7 @@ export default function Sidebar() {
         <p className="mb-6 text-slate-400 uppercase text-xs">Trading Journal</p>
         <Link
           onClick={() => setTabActive("mystrategy")}
-          href="/my-strategy"
+          href="/mystrategy"
           className={`flex items-center text-slate-900 mb-6 text-sm hover:bg-cyan-100 rounded-md p-3 ${
             tabActive == "mystrategy" ? "bg-cyan-100" : ""
           } `}
@@ -60,7 +60,7 @@ export default function Sidebar() {
         </Link>
         <Link
           onClick={() => setTabActive("myjournal")}
-          href="/my-journal"
+          href="/myjournal"
           className={`flex items-center text-slate-900 mb-6 text-sm hover:bg-cyan-100 rounded-md p-3 ${
             tabActive == "myjournal" ? "bg-cyan-100" : ""
           } `}
